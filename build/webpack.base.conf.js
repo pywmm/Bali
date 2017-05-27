@@ -1,5 +1,5 @@
 const path = require('path');
-const utils = require('./utils');
+const utils = require('./tool/utils');
 const config = require('./config');
 const vueLoaderConfig = require('./vue-loader.conf');
 const eslintFriendly = require('eslint-friendly-formatter');
