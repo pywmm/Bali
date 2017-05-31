@@ -59,12 +59,22 @@ exports.cssLoaders = function (options) {
 exports.styleLoaders = function (options) {
   const output = [];
   const loaders = exports.cssLoaders(options);
-  for (const extension in loaders) {
+  // for (const extension in loaders) {
+  //   const loader = loaders[extension];
+  //   output.push({
+  //     test: new RegExp(`\\.${extension}$`),
+  //     use: loader,
+  //   });
+  // }
+
+  Object.keys(loaders).forEach((extension) => {
     const loader = loaders[extension];
     output.push({
       test: new RegExp(`\\.${extension}$`),
       use: loader,
     });
-  }
+    // baseWebpackConfig.entry[name] = ['./build/dev-client'].concat(baseWebpackConfig.entry[name]);
+  });
+
   return output;
 };
