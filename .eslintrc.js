@@ -40,5 +40,6 @@ module.exports = {
     'consistent-return': 0,
     'no-mixed-operators': 0,
     'import/prefer-default-export': 0,
+    'no-console': 0,
   }
 }

@@ -20,9 +20,9 @@ module.exports = {
       : config.dev.assetsPublicPath,
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
+    extensions: ['.js', '.vue', '.json'], // enables leave off the extension when importing
     alias: {
-      vue$: 'vue/dist/vue.esm.js',
+      vue$: 'vue/dist/vue.esm.js', // $, signify an exact match
       '@': resolve('src'),
     },
   },
