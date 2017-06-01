@@ -6,7 +6,7 @@ const baseWebpackConfig = require('./webpack.base.conf');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 // const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
-// const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 
 // add hot-reload related code to entry chunks
 Object.keys(baseWebpackConfig.entry).forEach((name) => {
@@ -32,12 +32,13 @@ module.exports = merge(baseWebpackConfig, {
       filename: 'index.html', // 根目录
       template: 'index.html',
       // inlineSource: 'flex.(js|css)$',
-      inject: true,
+      inject: /app.js/,
+      cache: false,
     }),
 
-    // new ScriptExtHtmlWebpackPlugin({
-    //   inline: 'flex.js',
-    // }),
+    new ScriptExtHtmlWebpackPlugin({
+      inline: 'flex.js',
+    }),
     // new HtmlWebpackInlineSourcePlugin(),
     new FriendlyErrorsPlugin(),
   ],

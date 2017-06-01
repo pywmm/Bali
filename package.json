@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" ",
-    "dev": "node build/dev-server.js",
+    "dev": "nodemon build/dev-server.js",
     "eslint": "eslint build/**/*.js' 'src/**/*.js' 'src/**/*.vue'"
   },
   "repository": {
@@ -39,7 +39,7 @@
     "file-loader": "^0.11.1",
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-inline-source-plugin": "0.0.9",
-    "html-webpack-plugin": "^2.28.0",
+    "html-webpack-plugin": "github:jantimon/html-webpack-plugin#ef6d50a47241a530905241628738c3b1661ca0af",
     "http-proxy-middleware": "^0.17.4",
     "install": "^0.10.1",
     "npm": "^4.6.1",
