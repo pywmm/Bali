@@ -1,7 +1,7 @@
 const path = require('path');
 const utils = require('./tool/utils');
 const config = require('./config');
-const vueLoaderConfig = require('./vue-loader.conf');
+const vueLoaderConfig = require('./config/vue-loader.conf');
 const eslintFriendly = require('eslint-friendly-formatter');
 
 function resolve(dir) {

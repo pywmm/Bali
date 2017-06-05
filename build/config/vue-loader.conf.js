@@ -1,5 +1,5 @@
-const utils = require('./tool/utils');
-const config = require('./config');
+const utils = require('../tool/utils');
+const config = require('./index');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
