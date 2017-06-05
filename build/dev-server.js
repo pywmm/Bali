@@ -22,7 +22,7 @@ const compiler = webpack(webpackConfig);
 
 const devMiddleware = require('webpack-dev-middleware')(compiler, {
   publicPath: webpackConfig.output.publicPath,
-  quiet: false,
+  quiet: true,
 });
 
 const hotMiddleware = require('webpack-hot-middleware')(compiler, {

@@ -1,5 +1,6 @@
 const path = require('path');
 const config = require('../config');
+// https://vue-loader.vuejs.org/en/configurations/extract-css.html
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 exports.assetsPath = function (_path) {
