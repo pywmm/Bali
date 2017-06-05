@@ -72,7 +72,10 @@ win.addEventListener('pageshow', (e) => {
   }
 }, false);
 
-if (doc.readyState === 'complete') {
+// seems like it's better to use 'interactive' than 'complete' here
+// readystatechange as an alternative to DOMContentLoaded event
+// https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState
+if (doc.readyState === 'interactive') {
   doc.body.style.fontSize = `${12 * dpr}px`;
 } else {
   doc.addEventListener('DOMContentLoaded', () => {

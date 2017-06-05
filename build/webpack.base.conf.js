@@ -11,7 +11,7 @@ function resolve(dir) {
 module.exports = {
   entry: {
     app: './src/main.js',
-    flex: './src/public/flexible.js',
+    // flex: './src/widgets/flexible.js',
   },
   output: {
     // path: config.build.assetsRoot,
