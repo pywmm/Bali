@@ -8,7 +8,6 @@
 <script>
 // import headTop from '../../components/header/head'
 // import {cityGuess, hotcity, groupcity} from '../../service/getData'
-import './Home.scss';
 
 export default {
   name: 'Home',
@@ -17,3 +16,8 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+  @import '../../styles/pages/Home';
+</style>
+
