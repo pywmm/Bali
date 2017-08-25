@@ -3,6 +3,7 @@
 import VueRouter from 'vue-router';
 import Vue from 'vue';
 import routes from './router/router';
+import './styles/common.scss';
 
 Vue.config.productionTip = false;
 

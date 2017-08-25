@@ -1,4 +1,4 @@
-import Home from '@/pages/Home/Home';
+import Index from '@/pages/Index/Index';
 import Detail from '@/pages/Detail/Detail';
 import App from '../App';
 
@@ -9,12 +9,12 @@ export default [{
   // 地址为空时跳转home页面
     {
       path: '',
-      redirect: '/home',
+      redirect: '/index',
     },
     // 首页
     {
-      path: '/home',
-      component: Home,
+      path: '/index',
+      component: Index,
     },
     // 详情页
     {
