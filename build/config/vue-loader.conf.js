@@ -21,6 +21,7 @@ module.exports = {
     }),
     px2rem({
       remUnit: 75,
+      remPrecision: 3,
     }),
   ],
 };
