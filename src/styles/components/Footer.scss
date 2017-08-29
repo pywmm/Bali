@@ -12,7 +12,7 @@
     > section {
         flex-grow: 1;
         padding-top: 12px;
-        .active {
+        &.active {
             color: $primary-color;
         }
     }
