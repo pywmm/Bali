@@ -1,2 +1,8 @@
 @import '~normalize.css';
+@import './variables.scss';
 @import './mixin.scss';
+
+body {
+    width: 10rem;
+    margin: 0 auto;
+}
