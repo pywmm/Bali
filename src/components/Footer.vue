@@ -1,13 +1,18 @@
 <template>
     <section class="m-footer">
-      <div>首页</div>
-      <div>列表</div>
-      <div>other</div>
-      <div>我的</div>
+      <div><icon name="home" class="icon active"></icon><div>首页</div></div>
+      <div><icon name="th" class="icon"></icon><div>列表</div></div>
+      <div><icon name="th-list" class="icon"></icon><div>订单</div></div>
+      <div><icon name="user-o" class="icon"></icon><div>我的</div></div>
     </section>
 </template>
 
 <script>
+import 'vue-awesome/icons/home';
+import 'vue-awesome/icons/th';
+import 'vue-awesome/icons/th-list';
+import 'vue-awesome/icons/user-o';
+
 export default {
   name: 'Footer',
   data() {

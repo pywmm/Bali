@@ -1,9 +1,12 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import Icon from 'vue-awesome/components/Icon';
 import VueRouter from 'vue-router';
 import Vue from 'vue';
 import routes from './router/router';
 import './styles/common.scss';
+
+Vue.component('icon', Icon);
 
 Vue.config.productionTip = false;
 

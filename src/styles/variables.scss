@@ -1,11 +1,20 @@
-$blue: #3190e8;  
-$bc: #e4e4e4;
-$fc:#fff;
+// colors
+$primary-color: #076ddc;
 
-$blue: #030b4a;
-$blue2: #0201b7;
-$blue3: #076ddc;
-$blue4: #69f8fe;
-$green: #72996a; 
-$green2: #b3f0e0;
-$yellow: #f8fc84;
+
+// $bc: #e4e4e4;
+// $fc:#fff;
+
+// $blue: #030b4a;
+// $blue2: #0201b7;
+// $blue3: #076ddc;
+// $blue4: #69f8fe;
+// $green: #72996a; 
+// $green2: #b3f0e0;
+// $yellow: #f8fc84;
+
+// font
+$backupFontFamilys: 'Helvetica Neue,Helvetica,Hiragino Sans GB,Arial,sans-serif';
+$fontRegular: 'PingFangSC-Regular,' + $backupFontFamilys;
+$fontMedium: 'PingFangSC-Medium,' + $backupFontFamilys;
+$fontLight: 'PingFangSC-Light,' + $backupFontFamilys;
