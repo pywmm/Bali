@@ -5,8 +5,10 @@ import VueRouter from 'vue-router';
 import Vue from 'vue';
 import routes from './router/router';
 import './styles/common.scss';
+import VueAwesomeSwiper from './directives/swiper';
 
 Vue.component('icon', Icon);
+Vue.use(VueAwesomeSwiper);
 
 Vue.config.productionTip = false;
 

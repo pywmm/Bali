@@ -1,16 +1,17 @@
 <template>
   	<div class="m-index">
+      <banner />
     </div>
 </template>
 
 <script>
-import Footer from '../../components/Footer';
+import Banner from '../../components/widgets/Banner';
 
 export default {
   name: 'Index',
 
   components: {
-    Footer,
+    Banner,
   },
 
   data() {
