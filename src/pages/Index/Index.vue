@@ -1,6 +1,5 @@
 <template>
   	<div class="m-index">
-      <Footer />
     </div>
 </template>
 

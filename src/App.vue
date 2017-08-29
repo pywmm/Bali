@@ -1,14 +1,22 @@
 <template>
 	<div>
-	<transition name="router-fade" mode="out-in">
-      <router-view></router-view>
-    </transition>
+		<transition name="router-fade" mode="out-in">
+				<router-view></router-view>
+		</transition>
+		<Footer />
   </div>
 </template>
 
 <script>
+import Footer from './components/Footer';
 
+export default {
+  name: 'APP',
 
+  components: {
+    Footer,
+  },
+};
 </script>
 
 <style lang="scss" scoped>

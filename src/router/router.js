@@ -1,5 +1,8 @@
 import Index from '@/pages/Index/Index';
 import Detail from '@/pages/Detail/Detail';
+import List from '@/pages/List/List';
+import Home from '@/pages/Home/Home';
+import Order from '@/pages/Order/Order';
 import App from '../App';
 
 export default [{
@@ -15,6 +18,21 @@ export default [{
     {
       path: '/index',
       component: Index,
+    },
+    // 列表页
+    {
+      path: '/list',
+      component: List,
+    },
+    // 订单
+    {
+      path: '/order',
+      component: Order,
+    },
+    // 我的
+    {
+      path: '/home',
+      component: Home,
     },
     // 详情页
     {

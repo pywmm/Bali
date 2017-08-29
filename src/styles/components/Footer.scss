@@ -8,7 +8,8 @@
     height: 100px;
     text-align: center;
     border-top: 1px solid #e4e4e4; /*no*/
-    > div {
+    cursor: pointer;
+    > section {
         flex-grow: 1;
         padding-top: 12px;
         .active {
