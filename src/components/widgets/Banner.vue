@@ -1,6 +1,5 @@
 <template>
-  <div class="Banner">
-    <div v-swiper:mySwiper="swiperOption" style="overflow: hidden">
+    <div v-swiper:mySwiper="swiperOption">
       <div class="swiper-wrapper">
         <div
           v-for="(item, $index) in data.list"
@@ -8,15 +7,14 @@
           class="swiper-slide"
         >
             <img
-                :src="item.url"
-                class="Banner-img"
-                :alt="`图片${$index + 1}`"
+              :alt="`图片${$index + 1}`"
+              :src="item.url"
+              class="u-banner-img"
             />
         </div>
       </div>
       <div class="swiper-pagination swiper-pagination-bullets"></div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -24,11 +22,6 @@
 
   export default {
     name: 'banner',
-
-    exports: {
-      name: 'banner',
-      label: '轮播图',
-    },
 
     props: {
       data: {
