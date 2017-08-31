@@ -6,9 +6,12 @@ import Vue from 'vue';
 import routes from './router/router';
 import './styles/common.scss';
 import VueAwesomeSwiper from './directives/swiper';
+import InitAxios from './config/axios';
 
 Vue.component('icon', Icon);
 Vue.use(VueAwesomeSwiper);
+
+InitAxios();
 
 Vue.config.productionTip = false;
 
