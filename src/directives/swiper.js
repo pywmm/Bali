@@ -4,12 +4,22 @@ export default {
   install(Vue) {
     Vue.directive('swiper', {
       bind: (el) => {
+        console.log('v-bind');
         if (!el.classList.contains('swiper-container')) {
           el.classList.add('swiper-container');
         }
       },
 
-      inserted: (el, binding, vnode) => {
+      inserted: () => {
+        console.log('v-inserted');
+      },
+
+      update: () => {
+        console.log('v-update');
+      },
+
+      componentUpdated: (el, binding, vnode) => {
+        console.log('v-componentUpdated');
         const context = vnode.context;
         const instanceName = binding.arg;
         const options = binding.value;
@@ -19,19 +29,8 @@ export default {
         }
       },
 
-      componentUpdated: (el, binding, vnode) => {
-        const swipe = vnode.context[binding.arg];
-        if (swipe) {
-          swipe.update(true);
-          swipe.updatePagination(true);
-          swipe.slideTo(0, 0, false);
-          if (binding.value.loop) {
-            swipe.reLoop();
-          }
-        }
-      },
-
       unbind: (el, binding, vnode) => {
+        console.log('v-unbind');
         const swipe = vnode.context[binding.arg];
         if (swipe) {
           swipe.destroy();
