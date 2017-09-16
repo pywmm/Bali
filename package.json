@@ -5,9 +5,9 @@
   "author": "pywmm",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" ",
     "start": "concurrently -k \"npm run dev\" \"npm run mock\"",
     "dev": "nodemon build/dev-ssr-server.js",
+    "test": "nodemon build/test.js",
     "eslint": "eslint build/**/*.js' 'src/**/*.js' 'src/**/*.vue'",
     "mock": "nodemon ./mock/server.js"
   },
@@ -46,6 +46,7 @@
     "http-proxy-middleware": "^0.17.4",
     "install": "^0.10.1",
     "json-server": "^0.12.0",
+    "memory-fs": "^0.4.1",
     "node-sass": "^4.5.3",
     "npm": "^4.6.1",
     "opn": "^5.0.0",
@@ -62,7 +63,7 @@
     "url-loader": "^0.5.8",
     "vue-loader": "^12.1.0",
     "vue-style-loader": "^3.0.1",
-    "vue-template-compiler": "^2.3.3",
+    "vue-template-compiler": "^2.4.3",
     "webpack": "^2.6.1",
     "webpack-bundle-analyzer": "^2.8.2",
     "webpack-dev-middleware": "^1.10.2",

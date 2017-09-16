@@ -33,7 +33,7 @@ function createRouter() {
 
 // 导出一个工厂函数，用于创建新的
 // 应用程序、router 和 store 实例
-export const createApp = () => {
+function createApp() {
   // 创建 router 和 store 实例
   const router = createRouter();
   const store = createStore();
@@ -46,4 +46,6 @@ export const createApp = () => {
     render: h => h(App),
   });
   return { app, router, store };
-};
+}
+
+export default createApp;

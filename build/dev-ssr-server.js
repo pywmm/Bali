@@ -1,24 +1,41 @@
-// server.js
+const fs = require('fs');
+const path = require('path');
 const server = require('express')();
-const renderer = require('vue-server-renderer').createRenderer();
+const vueServerRenderer = require('vue-server-renderer');
+const setupDevServer = require('./test');
 
-const createApp = require('../src/server-entry');
+const resolvePath = file => path.resolve(__dirname, file);
+
+const template = fs.readFileSync(path.resolve(__dirname, '../index.html'), {
+  encoding: 'utf-8',
+});
+
+function createRenderer(bundle, options) {
+  return vueServerRenderer.createBundleRenderer(bundle, Object.assign(options, {
+    template,
+    basedir: resolvePath('../dist'),
+    runInNewContext: false,
+  }));
+}
+
+let renderer;
+setupDevServer((bundle, options) => {
+  renderer = createRenderer(bundle, options);
+});
+
 
 server.get('*', (req, res) => {
   const context = { url: req.url };
-  createApp(context).then((app) => {
-    renderer.renderToString(app, (err, html) => {
-      if (err) {
-        if (err.code === 404) {
-          res.status(404).end('Page not found');
-        } else {
-          res.status(500).end('Internal Server Error');
-        }
-      } else {
-        res.end(html);
-      }
-    });
+  renderer.renderToString(context, (err, html) => {
+    if (!err) {
+      res.end(html);
+    } else {
+      console.log('error');
+    }
   });
 });
 
-server.listen(8090);
+server.listen(8090, () => {
+  console.log('🌏  http server started at localhost:8090');
+});
+
