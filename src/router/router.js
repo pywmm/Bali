@@ -1,9 +1,16 @@
-import Index from '@/pages/Index/Index';
-import Detail from '@/pages/Detail/Detail';
-import List from '@/pages/List/List';
-import Home from '@/pages/Home/Home';
-import Order from '@/pages/Order/Order';
-import App from '../App';
+// import Index from '@/pages/Index/Index';
+// import Detail from '@/pages/Detail/Detail';
+// import List from '@/pages/List/List';
+// import Home from '@/pages/Home/Home';
+// import Order from '@/pages/Order/Order';
+// import App from '../App';
+const Index = () => import('@/pages/Index/Index');
+const Detail = () => import('@/pages/Detail/Detail');
+const List = () => import('@/pages/List/List');
+const Home = () => import('@/pages/Home/Home');
+const Order = () => import('@/pages/Order/Order');
+const App = () => import('../App');
+
 
 export default [{
   path: '/',

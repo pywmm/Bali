@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" ",
     "start": "concurrently -k \"npm run dev\" \"npm run mock\"",
-    "dev": "nodemon build/dev-server.js",
+    "dev": "nodemon build/dev-ssr-server.js",
     "eslint": "eslint build/**/*.js' 'src/**/*.js' 'src/**/*.vue'",
     "mock": "nodemon ./mock/server.js"
   },
@@ -79,6 +79,9 @@
     "swiper": "^3.4.2",
     "vue": "^2.3.3",
     "vue-awesome": "^2.3.1",
-    "vue-router": "^2.5.3"
+    "vue-router": "^2.5.3",
+    "vue-server-renderer": "^2.4.3",
+    "vuex": "^2.4.0",
+    "vuex-router-sync": "^4.3.1"
   }
 }
